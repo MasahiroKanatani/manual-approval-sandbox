@@ -1,0 +1,23 @@
+name: Do Something
+on:
+  workflow_dispatch:
+  release:
+    types:
+      - published
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+permissions:
+  issues: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: ./.github/actions/manual-approval
+      - name: do something
+        run: echo "Hello"
