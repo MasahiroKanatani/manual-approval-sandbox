@@ -5,7 +5,7 @@ inputs:
   approvers:
     description: Comma-delimited list of all required approvers.
     required: false
-    default: MasahiroKanatani,teknocat,amotz,briete,yuji-shimoda
+    default: MasahiroKanatani
   minimum-approvals:
     description: Minimum number of approvals required
     default: 1
