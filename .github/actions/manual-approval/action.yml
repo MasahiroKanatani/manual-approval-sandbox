@@ -44,7 +44,7 @@ runs:
           core.setOutput('ISSUE_BODY', issueBody);
     - uses: trstringer/manual-approval@v1
       with:
-        secret: ${{ input.token }}
+        secret: ${{ inputs.token }}
         approvers: ${{ inputs.approvers }}
         minimum-approvals: ${{ inputs.minimum-approvals }}
         issue-title: ${{ steps.set_issue_title_body.outputs.ISSUE_TITLE }}
