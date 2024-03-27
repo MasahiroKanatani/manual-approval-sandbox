@@ -20,5 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/manual-approval
+        with: 
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: do something
         run: echo "Hello"
