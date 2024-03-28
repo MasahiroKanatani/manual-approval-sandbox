@@ -23,6 +23,9 @@ runs:
         script: |
           let issueTitle = "";
           let issueBody = "";
+          console.log("github.actor", "${{ github.actor }}")
+          console.log("github.actor_id", "${{ github.actor_id }}")
+          console.log("github.triggering_actor", "${{ github.triggering_actor }}")
 
           switch("${{ github.event_name }}") {
             case "release":
